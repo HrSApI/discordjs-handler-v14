@@ -1,7 +1,7 @@
 <div align="center">
 	<br />
 	<p>
-		<a href="https://mrhrs.xyz"><img src="./images/HrSTextLogo.png" width="546" alt="mrhrs" /></a>
+		<a href="https://mrhrs.xyz"><img src="https://cdn.discordapp.com/attachments/1105785961536827394/1221706403744452608/HrSTextLogo.png?ex=6708c4c0&is=67077340&hm=40e819c37696209e3644b66ba18352f82022cd51759af976dee933d3ff3e6a46&" width="546" alt="mrhrs" /></a>
 	</p>
 	<br />
 	<p>
