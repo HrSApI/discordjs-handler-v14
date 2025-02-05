@@ -1,1 +1,47 @@
-function _0x5396(_0x3112a2,_0x373e72){const _0x1d836c=_0x1d83();return _0x5396=function(_0x5396b4,_0x4ef0f5){_0x5396b4=_0x5396b4-0xfd;let _0x1a54e7=_0x1d836c[_0x5396b4];return _0x1a54e7;},_0x5396(_0x3112a2,_0x373e72);}const _0x23f175=_0x5396;function _0x1d83(){const _0x5335a7=['exit','worker','4303410KdazoA','keys','env','SIGINT','unhandledRejection','exports','213336JOqjie','2823060uEDKeT','64pobmZI','log','3326DKNkWy','discord.js','3sbGXSW','7266805nUwAHE','7465152XwVIEO','2011084LVBeNu','10AeSAiB','destroy','login','error','Caught\x20interrupt\x20signal'];_0x1d83=function(){return _0x5335a7;};return _0x1d83();}(function(_0x511913,_0x5d308b){const _0x4d4333=_0x5396,_0x312d41=_0x511913();while(!![]){try{const _0xd2f367=-parseInt(_0x4d4333(0x104))/0x1*(parseInt(_0x4d4333(0x102))/0x2)+-parseInt(_0x4d4333(0x106))/0x3*(parseInt(_0x4d4333(0x109))/0x4)+parseInt(_0x4d4333(0x111))/0x5+parseInt(_0x4d4333(0x101))/0x6+-parseInt(_0x4d4333(0x107))/0x7+parseInt(_0x4d4333(0x108))/0x8+-parseInt(_0x4d4333(0x100))/0x9*(-parseInt(_0x4d4333(0x10a))/0xa);if(_0xd2f367===_0x5d308b)break;else _0x312d41['push'](_0x312d41['shift']());}catch(_0x50f33d){_0x312d41['push'](_0x312d41['shift']());}}}(_0x1d83,0x9c6d2));async function BuildIndex(){const _0x59cd6d=_0x5396,{Client:_0x49d389,GatewayIntentBits:_0x221deb,Partials:_0x5acd8a}=require(_0x59cd6d(0x105)),_0x34eeb0=new _0x49d389({'intents':[Object[_0x59cd6d(0x112)](_0x221deb)],'partials':[Object[_0x59cd6d(0x112)](_0x5acd8a)]}),{Run:_0x496d7e}=require('./functions/Run');await _0x496d7e(_0x34eeb0),console[_0x59cd6d(0x103)]('©\x20All\x20rights\x20reserved\x20by\x20the\x20HrS\x20Team.\x20Excellence\x20in\x20every\x20line\x20of\x20code.'),_0x34eeb0[_0x59cd6d(0x10c)](process[_0x59cd6d(0x113)]['TOKEN']),process['on']('uncaughtException',function(_0x59de48){console['error'](_0x59de48);}),process['on']('uncaughtExceptionMonitor',function(_0x495ec5){console['error'](_0x495ec5);}),process['on'](_0x59cd6d(0xfe),function(_0x49dfe4){const _0x1b14ab=_0x59cd6d;console[_0x1b14ab(0x10d)](_0x49dfe4);}),process['on']('rejectionHandled',function(_0x3ebe08){const _0x9f5f8a=_0x59cd6d;console[_0x9f5f8a(0x10d)](_0x3ebe08);}),process['on'](_0x59cd6d(0x110),function(_0x2fc773){const _0x270f1f=_0x59cd6d;console[_0x270f1f(0x10d)](_0x2fc773);}),process['on'](_0x59cd6d(0xfd),()=>{const _0xf84eee=_0x59cd6d;console['log']('Caught\x20interrupt\x20signal'),_0x34eeb0[_0xf84eee(0x10b)](),process[_0xf84eee(0x10f)]();}),process['on']('SIGTERM',()=>{const _0x48384f=_0x59cd6d;console[_0x48384f(0x103)](_0x48384f(0x10e)),_0x34eeb0[_0x48384f(0x10b)](),process[_0x48384f(0x10f)]();});}module[_0x23f175(0xff)]=BuildIndex;
+async function BuildIndex() {
+  const { Client, GatewayIntentBits, Partials } = require("discord.js");
+
+  const client = new Client({
+    intents: [Object.keys(GatewayIntentBits)],
+    partials: [Object.keys(Partials)],
+  });
+
+  const { Run } = require("./functions/Run");
+  await Run(client);
+
+  client.login(process.env.TOKEN);
+
+  process.on("uncaughtException", function (error) {
+    console.error(error);
+  });
+
+  process.on("uncaughtExceptionMonitor", function (error) {
+    console.error(error);
+  });
+
+  process.on("unhandledRejection", function (error) {
+    console.error(error);
+  });
+
+  process.on("rejectionHandled", function (error) {
+    console.error(error);
+  });
+
+  process.on("worker", function (error) {
+    console.error(error);
+  });
+
+  process.on("SIGINT", () => {
+    console.log("Caught interrupt signal");
+    client.destroy();
+    process.exit();
+  });
+
+  process.on("SIGTERM", () => {
+    console.log("Caught interrupt signal");
+    client.destroy();
+    process.exit();
+  });
+}
+
+module.exports = BuildIndex;
